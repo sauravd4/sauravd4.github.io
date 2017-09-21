@@ -32,7 +32,7 @@ a {
 .carousel {
     position: relative;
     max-width: 888px;
-    height: 280px; /* height of carousel */
+    height: 285px; /* height of carousel */
     overflow: hidden;
     margin: auto;
 }
