@@ -1,0 +1,137 @@
+﻿body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: white;
+    display: block;
+    width: 100%;
+    z-index: 2000;
+    position: fixed;
+}
+
+.main {
+    background-color: rgb(238, 238, 238);
+    padding: 0 40px;
+    position: relative;
+    top: 75px;
+}
+
+a {
+    color: #397ab7;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #27408B;
+    }
+
+.carousel {
+    position: relative;
+    max-width: 888px;
+    height: 280px; /* height of carousel */
+    overflow: hidden;
+    margin: auto;
+}
+
+.btnnav { /* semi circle left and right nav buttons */
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    font: bold 36px Arial;
+    cursor: pointer;
+    top: 105px;
+    width: 30px;
+    height: 55px;
+    box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, .3);
+    opacity: 0.9;
+}
+
+    .btnnav:hover {
+        background: #D8D8D8;
+    }
+
+    .btnnav span {
+        position: relative;
+        top: 7px;
+        left: 3px;
+    }
+
+    .btnnav.right {
+        right: 0;
+        border-radius: 0;
+    }
+
+        .btnnav.right span {
+            left: 8px;
+        }
+
+.belt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: left 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+
+.content {
+    min-width: 100px; /* minimum width */
+    padding: 5px;
+    text-align: center;
+    background: #fff;
+    webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: inline-block;
+    transition: all 0.2s ease-in; /* transition setting. Actual time set by script (options.bouncetime) */
+}
+
+    .content:hover {
+        background: #ccc;
+    }
+
+    .content a {
+        border-width: 0;
+    }
+
+    .content img {
+        display: block;
+        margin: auto;
+        margin-bottom: 5px;
+        width: 135px;
+        height: 175px;
+    }
+
+    .content ul li {
+        list-style: none;
+    }
+
+
+    .content ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+h2 {
+    text-align: center;
+}
+
+.imgdiv {
+    padding: 10px;
+    width: 135px;
+    height: 175px;
+    margin : auto;
+}
+
+.content img:hover {
+    width: 145px;
+    height: 185px;
+    z-index: 1000;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
