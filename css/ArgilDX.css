@@ -1,0 +1,142 @@
+﻿body
+{
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-toggle{
+    float : left;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 450px
+}
+
+.formdiv {
+    background: url('/images/Feed_bg.jpg');
+    background-size : cover;
+}
+
+.formtable tr td{
+    padding : 5px;
+}
+
+
+.btnSubmit {
+    border-radius: 20px;
+    background-color: #ff5454;
+    border-color: #ff5454;
+    margin-top: 15px;
+    padding: 5px 30px;
+}
+}
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+table{
+    width:100%;
+}
+
+.input-lg {
+    font-size :14px;
+}
+
+.socialIcon:hover {
+    color: #ff5454;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ff5454;
+} 
+
+
+
+
+.formtable {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+    background: rgba(0,0,0,0.1);
+    /*opacity : 0.4;*/
+}
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .formtable tr td{
+        display : block;
+    }
+}
+
+
+    /*#region Home*/
+
+    .insta {
+        background: url('/images/Feed_bg.jpg');
+        background-size: cover;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .carousel-caption {
+        top: 30%;
+    }
+
+    .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+    }
+
+    .carousel-inner > .item > img {
+        max-height: 400px;
+    }
+
+    .viewCase {
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        padding: 7px 15px;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #555;
+    }
+
+
+    .carousel-caption h3 {
+        color: #000000 !important;
+        font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+    }
+
+
+    /*#endregion*/
