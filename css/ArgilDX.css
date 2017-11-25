@@ -16,9 +16,22 @@
     height: 450px
 }
 
+.form-control::-webkit-input-placeholder {
+    color: #c9c9c9;
+}
+
+.form-control:hover::-webkit-input-placeholder {
+    color: #6b6b6b;
+}
+
+.form-control:hover {
+    cursor: default;
+}
+
 .formdiv {
-    background: url('/images/Feed_bg.jpg');
-    background-size : cover;
+    background: url(/images/Feed_bg.jpg);
+    background-repeat: round;
+    background-size: cover;
 }
 
 .formtable tr td{
