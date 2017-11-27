@@ -16,6 +16,29 @@
     height: 450px
 }
 
+.errPop {
+    position:relative;
+    width: 100%;
+    height: 30px;
+    background-color: #555d60;
+    color: #a4a8a9;
+    text-align: left;
+    padding: 4px 10px;
+}
+
+    .errPop:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 30px;
+        border-style: solid;
+        border-width: 0 8px 8px 8px;
+        border-color: #555d60 transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+    }
+
 .form-control::-webkit-input-placeholder {
     color: #c9c9c9;
 }
