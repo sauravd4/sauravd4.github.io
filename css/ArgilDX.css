@@ -154,10 +154,6 @@ footer {
         margin: auto;
     }
 
-    .carousel-inner > .item > img {
-        max-height: 600px;
-    }
-
     .viewCase {
         background-color: black;
         color: white;
