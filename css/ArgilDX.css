@@ -51,6 +51,16 @@
     cursor: default;
 }
 
+.navbar-logo {
+    width: 25px;
+    height: 35px;
+    background: url(../images/logo-stripe.png) no-repeat center center;
+    background-size: 100%;
+    float: left;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
 .formdiv {
     background: url(/images/Feed_bg.jpg);
     background-repeat: round;
@@ -122,8 +132,8 @@ footer {
         height: auto;
     }
 
-    .navbar-brand {
-        margin-left: 40%;
+    .navbar-logo {
+        margin-left: 38%;
     }
 
 }
@@ -147,6 +157,7 @@ footer {
 
     .carousel-caption {
         top: 30%;
+        padding : 0px;
     }
 
     .carousel-inner img {
