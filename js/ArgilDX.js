@@ -31,6 +31,13 @@ function iconToggle()
       $(".mid-menu").toggleClass("mid-animate");
       $(".bottom-menu").toggleClass("bottom-animate");
       $('body').toggleClass("stop-scrolling");
+        }
+
+function logoClick()
+{
+    $('.btnContact').removeClass("active");
+    $('.btnHome').addClass("active");
+    $('.contentpage').load('/Home.html');
 }
 
 
