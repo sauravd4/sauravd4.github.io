@@ -1,0 +1,90 @@
+﻿<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+ <!--form section contact-->
+<div id="formdiv" class="container-fluid text-center formdiv" style="height: 100vh;">
+    <div class="row content">
+        <div class="col-sm-12">
+            <br /><br />
+
+            <h2 style="color:white;max-width:400px;margin:auto;font-weight:600">WE WOULD LOVE TO HEAR FROM YOU</h2>
+            <br />
+            <!--<form name="contactform" action="">-->
+            <div class="table-responsive formtable">
+
+                <table class="tblForm">
+                    <tr>
+                        <td class="">
+                            <input class="form-control input-lg inputFirst" id="inputsm" type="text" placeholder="First Name">
+                            <div class="errPop hide">We need your first name.</div>
+                        </td>
+                        <td class="">
+                            <input class="form-control input-lg inputLast" id="inputsm" type="text" placeholder="Last Name">
+                            <div class="errPop hide">We need your last name.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="">
+                            <input class="form-control input-lg inputEmail" id="inputsm" type="email" placeholder="Your Email address" data-toggle="popover" data-placement="bottom" data-content="Please use a valid email address.">
+                            <div class="errPop hide">Please use a valid email address.</div>
+                        </td>
+                        <td class="">
+                            <input class="form-control input-lg" id="inputsm" type="text" placeholder="Your Phone Number(Optional)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea class="form-control inputMsg" rows="3" id="comment" placeholder="Your Message"></textarea>
+                            <div class="errPop hide">Sorry, your message can't be empty.</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <input type="button" value="Send" class="btn btn-danger btnSubmit" onclick="validateForm()">
+            <!--</form>-->
+            <div class="success" style="margin: auto;max-width: 500px;padding: 10px;background-color: #94a2a8;color: white;text-align: left;">
+                <span class="glyphicon glyphicon-ok" style="background-color: #737f83;border-radius: 50%;padding: 5px;margin: 0px 5%;"></span> Thank you, we have received your message.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            $(document).ready(function () {
+            $('.success').hide();
+
+        });
+        function validateForm()
+        {
+            $('.errPop').addClass('hide');
+            //check validation
+            var f = 0;
+            if ($('.inputFirst').val() == "") {
+                $('.inputFirst').next().removeClass('hide');
+                f = 1;
+            }
+            if ($('.inputLast').val() == "") {
+                $('.inputLast').next().removeClass('hide');
+                f = 1;
+            }
+            if ($('.inputMsg').val() == "") {
+                $('.inputMsg').next().removeClass('hide');
+                f = 1;
+            }
+            var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if (!expr.test($('.inputEmail').val()))
+            {
+                $('.inputEmail').next().removeClass('hide');
+                f = 1;
+            }
+            if (f == 0) {
+                $('.errPop').addClass('hide');
+                $('.formtable').hide();
+                $('.btnSubmit').hide();
+                $('.success').fadeIn(100).show();
+            }
+        }
+
+</script>

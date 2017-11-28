@@ -9,212 +9,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/ArgilDX.css?v=1.2" type="text/css" rel="stylesheet" />
+    <link href="css/ArgilDX.css?v=1.3" type="text/css" rel="stylesheet" />
+    <script src="js/ArgilDX.js"></script>
 </head>
 <body id="Home" data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-inverse" style="background-color :black">
+        <div class="mobilenav">
+                <li><a href="#" onclick="Home(this)">Home</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#" onclick="Contact(this)">Contact</a></li>
+        </div>
+
+        <a href="javascript:void(0)" class="icon">
+            <div class="mobMenu">
+                <div class="menui top-menu"></div>
+                <div class="menui mid-menu"></div>
+                <div class="menui bottom-menu"></div>
+            </div>
+        </a>
+
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#Home"><strong>/</strong></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Home" onclick="Home(this)">Home</a></li>
                     <li><a href="#">People</a></li>
-                    <li class="active"><a href="#formdiv">Contact</a></li>
+                    <li><a href="#formdiv" onclick="Contact(this)">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/Florensis.jpg" alt="Florensis">
-                <div class="carousel-caption">
-                    <h3>WALIBI</h3>
-                    <a class="left btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    </a>
-                    <button type="button" class="btn btn-primary viewCase">View Case</button>
-                    <a class="right btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
 
-            <div class="item">
-                <img src="images/Walibi.jpg" alt="Chicago">
-                <div class="carousel-caption">
-                    <h3>WALIBI</h3>
-                    <a class="left btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    </a>
-                    <button type="button" class="btn btn-primary viewCase">View Case</button>
-                    <a class="right btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    </a>
 
-                </div>
-            </div>
 
-            <div class="item">
-                <img src="images/Oxxio.png" alt="Los Angeles">
-                <div class="carousel-caption">
-                    <h3>WALIBI</h3>
-                    <a class="left btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    </a>
-                    <button type="button" class="btn btn-primary viewCase">View Case</button>
-                    <a class="right btn btn-primary viewCase" href="#myCarousel" style="padding: 2px 5px;border-radius: 50%;" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <!--<a class="left btn btn-primary viewCase" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        </a>-->
-        <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>-->
+    <div class="contentpage">
+        <!--<iframe src="http://localhost:52132/Home.html" style="border: 0; position:absolute; top:50px; left:0; right:0; bottom:0; width:100%; height:100%"></iframe>-->
     </div>
-    <br />
-    <br />
-    <div class="container text-center">
-        <h3><strong>WE ARE TAM TAM</strong></h3>
-        <p>To us, the key to digital success is a careful balance between creativity, data and code. As an independent, full service digital agency, we’re committed to building brands through awesome digital experiences that make people smile. Through a combination of your brand DNA and our expertise in all things digital, we develop tailored digital solutions that connect the heart of your business to the hearts of your customers, creating impact and resonance with the people that matter.</p>
-        <br>
-        <br>
-    </div>
-    <div class="insta text-center">
-        <h3 style="color:#7a939b;font-weight: 800;">FOLLOW US ON INSTAGRAM</h3>
-        <h5 style="color:white">@tamtamni</h5>
-        <br />
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/1.jpg" target="_blank">
-                            <img src="/images/1.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/2.jpg" target="_blank">
-                            <img src="/images/2.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/3.jpg" target="_blank">
-                            <img src="/images/3.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/4.jpg" target="_blank">
-                            <img src="/images/4.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/5.jpg" target="_blank">
-                            <img src="/images/5.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="/images/6.jpg" target="_blank">
-                            <img src="/images/6.jpg" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Some Text.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--form section contact-->
-    <div id="formdiv" class="container-fluid text-center formdiv">
-        <div class="row content">
-            <div class="col-sm-12">
-                <br /><br />
-
-                <h2 style="color:white;max-width:400px;margin:auto">WE WOULD LOVE TO HEAR FROM YOU</h2>
-                <br />
-                <!--<form name="contactform" action="">-->
-                    <div class="table-responsive formtable">
-
-                        <table class="tblForm">
-                            <tr>
-                                <td class="">
-                                    <input class="form-control input-lg inputFirst" id="inputsm" type="text" placeholder="First Name">
-                                    <div class="errPop hide">We need your first name.</div>
-                                </td>
-                                <td class="">
-                                    <input class="form-control input-lg inputLast" id="inputsm" type="text" placeholder="Last Name">
-                                    <div class="errPop hide">We need your last name.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="">
-                                    <input class="form-control input-lg inputEmail" id="inputsm" type="email" placeholder="Your Email address" data-toggle="popover" data-placement="bottom" data-content="Please use a valid email address.">
-                                    <div class="errPop hide">Please use a valid email address.</div>
-                                </td>
-                                <td class="">
-                                    <input class="form-control input-lg" id="inputsm" type="text" placeholder="Your Phone Number(Optional)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <textarea class="form-control inputMsg" rows="3" id="comment" placeholder="Your Message"></textarea>
-                                    <div class="errPop hide">Sorry, your message can't be empty.</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <input type="button" value="Send" class="btn btn-danger btnSubmit" onclick="validateForm()">
-                    <!--</form>-->
-                    <div class="alert alert-success success" style="margin:auto;max-width:500px">
-                        <span class="glyphicon glyphicon-ok"></span> Thank you, we have received your message.
-                    </div>
-            </div>
-        </div>
-    </div>
-
+    <script>
+    $(function(){
+        $('.contentpage').load('/Home.html');
+    });
+    </script>
     <footer class="container-fluid text-center" style="background-color :black">
         <div class="social">
             <i style="font-size:24px" class="fa btn socialIcon">&#xf09a;</i>
@@ -226,52 +63,5 @@
     </footer>
 
 
-    <script>
-        $(document).ready(function () {
-            $('.success').hide();
-
-        });
-        $('form').on('submit', function () {
-            //check validation
-            var f = 0;
-            if ($('.inputFirst').txt() == "") {
-                $('.inputFirst').next.removeClass('hide');
-            }
-            //$('form').hide();
-            //$('.success').fadeIn(100).show();
-        });
-
-        function validateForm()
-        {
-            $('.errPop').addClass('hide');
-            //check validation
-            var f = 0;
-            if ($('.inputFirst').val() == "") {
-                $('.inputFirst').next().removeClass('hide');
-                f = 1;
-            }
-            if ($('.inputLast').val() == "") {
-                $('.inputLast').next().removeClass('hide');
-                f = 1;
-            }
-            if ($('.inputMsg').val() == "") {
-                $('.inputMsg').next().removeClass('hide');
-                f = 1;
-            }
-            var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-            if (!expr.test($('.inputEmail').val()))
-            {
-                $('.inputEmail').next().removeClass('hide');
-                f = 1;
-            }
-            if (f == 0) {
-                $('.errPop').addClass('hide');
-                $('.formtable').hide();
-                $('.btnSubmit').hide();
-                $('.success').fadeIn(100).show();
-            }
-        }
-
-    </script>
 </body>
 </html>
