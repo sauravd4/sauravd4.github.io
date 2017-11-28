@@ -30,6 +30,7 @@ function iconToggle()
       $(".top-menu").toggleClass("top-animate");
       $(".mid-menu").toggleClass("mid-animate");
       $(".bottom-menu").toggleClass("bottom-animate");
+      $('body').toggleClass("stop-scrolling");
 }
 
 

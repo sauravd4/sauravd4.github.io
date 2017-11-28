@@ -308,3 +308,8 @@ footer {
 .viewCase:hover {
     background-color: #ff5454;
 }
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
