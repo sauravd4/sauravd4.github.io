@@ -3,14 +3,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
- <!--form section contact-->
-<div id="formdiv" class="container-fluid text-center formdiv" style="height: 100vh;">
+<!--form section contact-->
+<div id="formdiv" class="container-fluid text-center formdiv" style="height: 100vh;min-height:500px">
     <div class="row content">
         <div class="col-sm-12">
             <br /><br />
 
             <h2 style="color:white;max-width:400px;margin:auto;font-weight:600">WE WOULD LOVE TO HEAR FROM YOU</h2>
             <br />
+            <div class="validateErr" style="margin: auto;max-width: 500px;padding: 10px;background-color: #94a2a8;margin-bottom:10px;color: white;text-align: left;">
+                <span class="glyphicon" style="background-color: #737f83;border-radius: 50%;padding: 3px 7px;font-weight:900;margin: 0px 5%;">!</span> Please complete the form and try again.
+            </div>
+
             <!--<form name="contactform" action="">-->
             <div class="table-responsive formtable">
 
@@ -54,6 +58,7 @@
 <script>
             $(document).ready(function () {
             $('.success').hide();
+                $('.validateErr').hide();
 
         });
         function validateForm()
@@ -84,7 +89,11 @@
                 $('.formtable').hide();
                 $('.btnSubmit').hide();
                 $('.success').fadeIn(100).show();
+                                $('.validateErr').hide();
+
             }
+            else
+                $('.validateErr').show();
         }
 
 </script>
