@@ -13,6 +13,11 @@
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 </a>
             </div>
+            <div class="carousel-caption carousel-extend">
+                <a href="#TAMTAM"><img class="imgCaruselExtend" src="images/basic.gif" /></a>
+                <span class="spanV" style="font-size:8px">V</span>
+            </div>
+
         </div>
 
         <div class="item">
@@ -28,6 +33,11 @@
                 </a>
 
             </div>
+            <div class="carousel-caption carousel-extend">
+                <a href="#TAMTAM"><img class="imgCaruselExtend" src="images/basic.gif" /></a>
+                <span class="spanV" style="font-size:8px">V</span>
+            </div>
+
         </div>
 
         <div class="item">
@@ -42,19 +52,14 @@
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 </a>
             </div>
+           <div class="carousel-caption carousel-extend">
+               <a href="#TAMTAM"><img class="imgCaruselExtend" src="images/basic.gif" /></a>
+               <span class="spanV" style="font-size:8px">V</span>
+            </div>
         </div>
     </div>
-
-    <!-- Left and right controls -->
-    <!--<a class="left btn btn-primary viewCase" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    </a>-->
-    <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>-->
 </div>
-<div class="container text-center">
+<div class="container text-center" id="TAMTAM">
     <h3><strong>WE ARE TAM TAM</strong></h3>
     <p>To us, the key to digital success is a careful balance between creativity, data and code. As an independent, full service digital agency, we’re committed to building brands through awesome digital experiences that make people smile. Through a combination of your brand DNA and our expertise in all things digital, we develop tailored digital solutions that connect the heart of your business to the hearts of your customers, creating impact and resonance with the people that matter.</p>
     <br>
@@ -83,11 +88,20 @@
                 console.log(data);
                 for (x in data.data) {
                     $('.instaphotos').append('<div class="col-md-4"><div class="thumbnail" ><img src="' + data.data[x].images.low_resolution.url + '"" style="width:100%"><div class="caption"><p class="instaText">"'+ data.data[x].caption.text +'"</p></div></div></div>');
-                        //append('<li><img src="' + data.data[x].images.low_resolution.url + '"></li>');
                 }
             },
             error: function (data) {
                 console.log(data);
             }
+    });
+
+        $(document).ready(function () {
+            if (window.screen.width < 768)
+            {
+                $('.imgCaruselExtend').attr('src', 'images/down.gif')
+                $('.spanV').hide();
+            }
+
         });
+
 </script>

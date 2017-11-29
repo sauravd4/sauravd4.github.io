@@ -16,8 +16,20 @@
     height: 450px
 }
 
+.carousel-extend {
+    width: 20px;
+    height: 20px;
+    bottom: 10% ;
+    top: auto !important;
+    left: 49%;
+}
+
+    .carousel-extend :hover {
+        cursor: pointer;
+    }
+
 .errPop {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 30px;
     background-color: #555d60;
@@ -291,6 +303,14 @@ footer {
     .icon {
         display: none;
     }
+    .carousel-extend {
+        width: 35px;
+        height: 35px;
+        bottom: 10%;
+        top: auto;
+        left: 49%;
+    }
+
 }
 
 #rudr_instafeed {
