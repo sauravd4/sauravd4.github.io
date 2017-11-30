@@ -74,7 +74,7 @@
 }
 
 .formdiv {
-    background: url(/images/Feed_bg.jpg);
+    background: url(../images/Feed_bg.jpg);
     background-repeat: round;
     background-size: cover;
 }
@@ -161,7 +161,7 @@ footer {
     /*#region Home*/
 
     .insta {
-        background: url('/images/Feed_bg.jpg');
+        background: url('../images/Feed_bg.jpg');
         background-size: cover;
         width: 100%;
         padding: 20px;
