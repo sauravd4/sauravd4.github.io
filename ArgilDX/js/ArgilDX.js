@@ -10,7 +10,7 @@
                 iconToggle();
             $(ele).parent().siblings().removeClass('active');
             $(ele).parent().addClass('active');
-            $('.contentpage').load('/Contact.html');
+            $('.contentpage').load('ArgilDX/Contact.html');
         }
 
         function Home(ele)
@@ -20,7 +20,7 @@
                         $(ele).parent().siblings().removeClass('active');
             $(ele).parent().addClass('active');
 
-            $('.contentpage').load('/Home.html');
+            $('.contentpage').load('ArgilDX/Home.html');
 
         }
 
@@ -37,7 +37,7 @@ function logoClick()
 {
     $('.btnContact').removeClass("active");
     $('.btnHome').addClass("active");
-    $('.contentpage').load('/Home.html');
+    $('.contentpage').load('ArgilDX/Home.html');
 }
 
 
