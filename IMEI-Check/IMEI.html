@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h2 style="text-align:center">Check if IMEI no. is valid</h2>
+    <br />
+    <div style="width:300px;margin:auto">
+        Dial <b>*#06#</b> on your phone to get the IMEI number
+        <br /><br />
+        <input id="txtIMEI" type="text" placeholder="Enter 15 digit IMEI no" maxlength="15" style="font-size: 16px" class="posttxt mobilechng" />
+        <input id="btnimei" type="button" value="Update" onclick="imeicheck()" />
+        <span id="imeiok" class="glyphicon glyphicon-ok" style="color: green; display: none" data-toggle="tooltip" title="IMEI verified"></span>
+        <span id="imeiwrong" class="glyphicon glyphicon-remove" style="color: red; display: none" data-toggle="tooltip" title="Please Enter a valid IMEI"></span>
+        
+    </div>
+
+    <script>
+        function imeicheck() {
+            var imei = $("#txtIMEI").val();
+            if (imei.length >= 14) {
+                var last = imei[imei.length - 1];
+                var sum = 0;
+                for (var i = 0; i <= imei.length - 2; i++) {
+                    if (i % 2 == 0)
+                        sum = parseInt(sum) + parseInt(imei[i]);
+                    else {
+                        var dbl = imei[i] * 2;
+                        if (dbl > 9) {
+                            dbl = dbl.toString();
+                            sum = sum + (parseInt(dbl[0]) + parseInt(dbl[1]));
+                        }
+                        else
+                            sum = parseInt(sum) + parseInt(dbl);
+                    }
+                }
+                sum = sum.toString();
+                var lstdgt = parseInt(sum[sum.length - 1]);
+                var checklast = 10 - lstdgt;
+                if (checklast == last || (last == 0 && lstdgt == 0)) {
+                    //correct
+                    $("#imeiwrong").hide();
+                    $("#imeiok").show();
+                }
+                else {
+                    $("#imeiwrong").show();
+                    $("#imeiok").hide();
+                }
+            }
+            else {
+                $("#imeiwrong").show();
+                $("#imeiok").hide();
+            }
+        }
+
+    </script>
+</body>
+</html>

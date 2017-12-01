@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="width:400px;margin:auto">
+    
+    <h2 style="text-align:center">Image Optimisation</h2>
+    <br />
+    <ul>
+        <li>
+            <h5>
+                Upload large image files in seconds
+            </h5>
+        </li>
+        <li>
+            <h5>
+                Roatate Image
+            </h5>
+        </li>
+        <li>
+            <h5>
+                Delete image
+            </h5>
+        </li>
+    </ul>
+    <br />
+    <div class="fileUpload">
+        <img alt="" src="images/plus.png" class="img" />
+        <img class="img-rotate-icon" onclick="rotateimg(this)" src="images/rotate_right.png" />
+        <img class="img-close-icon" src="images/closebtn.png" onclick="delimg(this)" />
+        <input type="file" class="upload" onchange="readURL(this)" accept="image/*" />
+        <input id="hdnDataURL1" type="text" class="hdnDataURL" />
+        <input id="hdnimgname1" type="text" class="hdnimgname" />
+
+    </div>
+
+    <style>
+
+        .fileUpload {
+            text-align: center;
+            position: relative;
+            /*overflow: hidden;*/
+            width: 86px !important;
+            height: 86px !important;
+            border: 1px dashed;
+            cursor: pointer;
+            display: table-cell;
+            vertical-align: middle;
+            display: block;
+            margin : auto;
+        }
+
+            .fileUpload input.upload {
+                width: 86px !important;
+                height: 86px !important;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+
+        .img {
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+        }
+
+        .img-close-icon {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            right: -4px;
+            top: -3px;
+            border-radius: 50px;
+            visibility: hidden;
+            display: none;
+        }
+
+        .img-rotate-icon {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            left: -4px;
+            top: -3px;
+            border-radius: 50px;
+            visibility: hidden;
+            display: none;
+        }
+
+        .fileUpload:hover .img-close-icon {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .fileUpload:hover .img-rotate-icon {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .hdnDataURL {
+            display: none;
+        }
+
+        .hdnimgname {
+            display: none;
+        }
+        /*#endregion*/
+
+
+        #ContentPlaceHolder1_pic1_ctl01 {
+        }
+
+        .image1 {
+            position: absolute;
+            left: 580px;
+            top: 728px;
+            width: 10px;
+        }
+
+    </style>
+
+    <script>
+        var canvas;
+        function readURL(input) {
+            debugger;
+            if (input.files && input.files[0]) {
+                var type = input.files[0].type.split("/");
+                type = type[1];
+                if (type.toLowerCase() == 'jpeg' || type.toLowerCase() == 'jpg' || type.toLowerCase() == 'png') {
+                    //alert(input.files[0].size)
+                    var reader = new FileReader();
+                    reader.onload = function (readerEvent) {
+                        var image = new Image();
+                        image.onload = function () {
+                            //alert(image.width);
+                            var w = this.width;
+                            var actualWidth = image.width;
+                            var actualHeight = image.height;
+                            var maxHeight = 600.0;
+                            var maxWidth = 800.0;
+                            var imgRatio = actualWidth / actualHeight;
+                            var maxRatio = maxWidth / maxHeight;
+                            var compressionQuality = 0.5;//50 percent compression
+
+                            if (actualHeight > maxHeight || actualWidth > maxWidth) {
+                                if (imgRatio < maxRatio) {
+                                    //adjust width according to maxHeight
+                                    imgRatio = maxHeight / actualHeight;
+                                    actualWidth = imgRatio * actualWidth;
+                                    actualHeight = maxHeight;
+                                }
+                                else if (imgRatio > maxRatio) {
+                                    //adjust height according to maxWidth
+                                    imgRatio = maxWidth / actualWidth;
+                                    actualHeight = imgRatio * actualHeight;
+                                    actualWidth = maxWidth;
+                                } else {
+                                    actualHeight = maxHeight;
+                                    actualWidth = maxWidth;
+                                }
+                            }
+                            // Resize the image
+                            canvas = document.createElement('canvas');
+                            width = actualWidth;
+                            height = actualHeight;
+                            canvas.width = width;
+                            canvas.height = height;
+                            canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+                            var dataURL = canvas.toDataURL('image/jpeg');
+                            $(input).siblings(".img").attr('src', dataURL);
+                            var hdnDataURL = $(input).siblings(".hdnDataURL");
+                            var hdnimgname = $(input).siblings(".hdnimgname");
+                            dataURL = dataURL.replace('data:image/jpeg;base64,', '');
+                            var filename = input.files[0].name.split(".");
+                            $(hdnimgname).val(filename[0]);
+                            $(hdnDataURL).val(dataURL);
+                            $(input).parent().css('border', '1px solid');
+                            $(input).siblings(".img-close-icon").css('display', 'block');
+                            $(input).siblings(".img-rotate-icon").css('display', 'block');
+                            $(input).parent().css('cursor', 'default');
+                            $(input).css('display', 'none');
+
+                        }
+                        image.src = readerEvent.target.result;
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+                else {
+                    $(".lblmsg").text("");
+                    $(".lblmsg").append("File Upload Failed! <br> Note : Supported formats jpeg, jpg or png.");
+                    $('#alertpop').modal('show');
+                }
+            }
+        }
+
+        function delimg(input) {
+            $(input).siblings(".img").attr('src', 'images/plus.png');
+            $(input).siblings(".upload").css('display', 'block');
+            $(input).parent().css('border', '1px dashed');
+            $(input).css('display', 'none');
+            $(input).siblings(".img-rotate-icon").css('display', 'none');
+            $(input).siblings(".hdnDataURL").val("");
+            $(input).siblings(".hdnimgname").val("");
+        }
+
+
+        function rotateimg(input) {
+
+            var img = $(input).siblings(".img");
+            var dataURL = $(input).siblings(".img").attr('src');
+            var ctx = canvas.getContext("2d");
+            var image = new Image();
+            image.src = dataURL;
+            image.onload = function () {
+                //ctx.translate(image.width, image.height);
+                canvas.width = image.height;
+                canvas.height = image.width;
+                ctx.rotate(90 * Math.PI / 180);
+                ctx.translate(0, -canvas.width);
+                ctx.drawImage(image, 0, 0);
+                ctx.restore();
+                var dataURL = canvas.toDataURL('image/jpeg');
+
+                $(input).siblings(".img").attr('src', dataURL);
+                var hdnDataURL = $(input).siblings(".hdnDataURL");
+                dataURL = dataURL.replace('data:image/jpeg;base64,', '');
+                $(hdnDataURL).val(dataURL);
+            };
+        }
+
+
+    </script>
+</body>
+</html>
