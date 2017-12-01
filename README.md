@@ -1,6 +1,6 @@
 # sauravd4.github.io
 
-ArgilDx - A sample bootstrap page. Completely responsive and compatible with different broweres and devices.
+ArgilDx - A sample bootstrap page. Completely responsive and compatible with different browsers and devices.
           Instagram Api to GET posts with images and caption.
           Link - https://sauravd4.github.io/ArgilDX/ArgilDX.html
 
