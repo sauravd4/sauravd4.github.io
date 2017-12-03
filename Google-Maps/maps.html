@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script async="async" defer="defer"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWw_9bohYhOjza4MQ1rBV1CW6BxfERiOQ&callback=initMap">
     </script>
@@ -19,12 +21,7 @@
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            }
-            else
-            {
-                alert("Kindly grant access to location");
-                getLocation();
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
             }
         }
 
@@ -49,9 +46,34 @@
             $(".longitude").val(lng);
 
         }
+
+        function showError(error) {
+            var x = $('.errorMsg');
+            x.show();
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.text("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.text("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    x.text("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.text("An unknown error occurred.");
+                    break;
+            }
+        }
     </script>
 
     <h2 style="text-align:center">Get location</h2>
+    <div class="errorMsg alert alert-danger" hidden style="text-align:center;max-width:400px;margin:auto;"></div>
+    <style>
+        table tr td {
+            padding : 10px;
+        }
+    </style>
     <div style="width:300px;margin:auto">
         <table>
             <tr>
