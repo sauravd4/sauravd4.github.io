@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        $(window).on('load', function () {
+            getLocation();
+        });
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else
+            {
+                alert("Kindly grant access to location");
+            }
+        }
+
+        function showPosition(position) {
+            sessionStorage.lat = position.coords.latitude;
+            sessionStorage.long = position.coords.longitude;
+            document.cookie = "lat=" + position.coords.latitude;
+            document.cookie = "long=" + position.coords.longitude;
+            sessionStorage.location = "true";
+            var lat = sessionStorage.lat;
+            var lng = sessionStorage.long;
+            var latlng = new google.maps.LatLng(lat, lng);
+            var geocoder = geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        var address = results[0].formatted_address;
+                        var split = address.split(",");
+                        $(".Address").val($.trim(split[1] + "," + split[2] + "," + split[3]));
+                    }
+                }
+            });
+
+        }
+    </script>
+
+    <h2 style="text-align:center">Get location</h2>
+    <div style="width:300px;margin:auto">
+        <table>
+            <tr>
+                <td>
+                    Address - 
+                </td>
+                <td>
+                    <input type="text" style="font-size: 16px" class="Address" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    latitude -
+                </td>
+                <td>
+                    <input type="text" style="font-size: 16px" class="latitude" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    longitude -
+                </td>
+                <td>
+                    <input type="text" style="font-size: 16px" class="longitude" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
