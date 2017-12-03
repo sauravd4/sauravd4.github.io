@@ -19,3 +19,7 @@ IMEI-Check - Check if a number is a valid IMEI number or not
 Reduce-Image_Size - Compress Image using canvas in jquery. Load images insatntly. Similar to what whatsapp is using.
                     Rotate image, Delete Image. convert image byte code and get dataURL
                     Link - https://sauravd4.github.io/Reduce-Image-Size/Image.html
+                    
+                    
+Google Maps - Get Current location physical address as well as latitude and longitude.
+                    Link - https://sauravd4.github.io/Google-Maps/maps.html
