@@ -6,6 +6,11 @@
     <title></title>
 </head>
 <body>
+    <script async="async" defer="defer"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWw_9bohYhOjza4MQ1rBV1CW6BxfERiOQ&callback=initMap">
+    </script>
+
+
     <script>
         $(window).on('load', function () {
             getLocation();
@@ -24,8 +29,6 @@
         function showPosition(position) {
             sessionStorage.lat = position.coords.latitude;
             sessionStorage.long = position.coords.longitude;
-            document.cookie = "lat=" + position.coords.latitude;
-            document.cookie = "long=" + position.coords.longitude;
             sessionStorage.location = "true";
             var lat = sessionStorage.lat;
             var lng = sessionStorage.long;
