@@ -1,14 +1,19 @@
-$.getJSON('https://hindi-devo.ptlp.co/api/userpratilipi/review/list?pratilipiId=5728283396145152&resultCount=5', function (data) {
+
+var p = $.getJSON('https://hindi-devo.ptlp.co/api/userpratilipi/review/list?pratilipiId=5728283396145152&resultCount=5', function (data) {
     console.log(data);
     Display(data);
 });
 
-function Display(data)
-{
+setTimeout(function () {
+    p.abort();
+    $('.errorMsg').show();
+}, 2000);
+
+function Display(data) {
+    debugger;
     var review = new Object();
     var divHtml = $(".divReview:first-child").clone();
-    for (var i = 0; i < data.reviewList.length;i++)
-    {
+    for (var i = 0; i < data.reviewList.length; i++) {
         debugger;
         $(divHtml).find('.name').text(data.reviewList[i].userName);
         $(divHtml).find('.Review').text(data.reviewList[i].review);
@@ -29,9 +34,8 @@ function Display(data)
         hours -= days * 24;
         var weeks = (days / 7) | 0;
         days -= weeks * 7;
-        if (days == 0)
-        {
-            if (hours==0)
+        if (days == 0) {
+            if (hours == 0)
                 $(divHtml).find('.time').text(minutes + " minutes ago");
             else
                 $(divHtml).find('.time').text(hours + " hours ago");
