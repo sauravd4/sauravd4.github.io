@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1{
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://www.planwallpaper.com/static/images/7864-download-full-hd-romantic-beach-water-nature-background.jpg");
+  min-height: 100%;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+</head>
+<body>
+		<h3 style="text-align:center;">Parallax Demo</h3>
+<div class="bgimg-1">
+
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Parallax Demo</h3>
+  <p>
+			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
+
+			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
+			
+			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
+			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
+
+			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
+			
+			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
+			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
+
+			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
+			
+			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
+			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
+
+			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
+			
+			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
+
+		</p>
+</div>
+
+</body>
+</html>
