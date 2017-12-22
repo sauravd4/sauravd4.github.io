@@ -6,7 +6,8 @@
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	font-size: 16px
   color: #777;
 }
 
@@ -16,13 +17,11 @@ body, html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+	background-size: cover;
+	background-image: url("https://www.planwallpaper.com/static/images/7864-download-full-hd-romantic-beach-water-nature-background.jpg");
+  height: 31.25rem;
+}
 
-}
-.bgimg-1 {
-  background-image: url("https://www.planwallpaper.com/static/images/7864-download-full-hd-romantic-beach-water-nature-background.jpg");
-  min-height: 100%;
-}
 
 h3 {
   letter-spacing: 5px;
@@ -33,7 +32,7 @@ h3 {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1{
         background-attachment: scroll;
     }
 }
