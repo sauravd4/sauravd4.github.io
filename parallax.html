@@ -1,75 +1,93 @@
-
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <head>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-	font: 400 15px/1.8 "Lato", sans-serif;
-	font-size: 16px
-  color: #777;
-}
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			font: 400 15px/1.8 "Lato", sans-serif;
+			font-size: 16px color: #777;
+		}
 
-.bgimg-1{
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url("https://www.planwallpaper.com/static/images/7864-download-full-hd-romantic-beach-water-nature-background.jpg");
-  height: 31.25rem;
-}
+		.bgimg-1 {
+			position: relative;
+			opacity: 0.65;
+			background-attachment: scroll;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url("https://www.planwallpaper.com/static/images/7864-download-full-hd-romantic-beach-water-nature-background.jpg");
+			height: 31.25rem;
+		}
 
 
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
+		h3 {
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			font: 20px "Lato", sans-serif;
+			color: #111;
+		}
 
-/* Turn off parallax scrolling for tablets and phones */
+		/*  Turn off parallax scrolling for tablets and phones 
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1{
         background-attachment: scroll;
     }
-}
-</style>
+} */
+	</style>
+	<script>
+
+		$(document).ready(function () {
+			var deviceDetector = function () { var b = navigator.userAgent.toLowerCase(), a = function (a) { void 0 !== a && (b = a.toLowerCase()); return /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(b) ? "tablet" : /(mobi|ipod|phone|blackberry|opera mini|fennec|minimo|symbian|psp|nintendo ds|archos|skyfire|puffin|blazer|bolt|gobrowser|iris|maemo|semc|teashark|uzard)/.test(b) ? "phone" : "desktop" }; return { device: a(), detect: a, isMobile: "desktop" != a() ? !0 : !1, userAgent: b } }();
+			if (deviceDetector.device == 'desktop')
+				$('.bgimg-1').css('background-attachment', 'fixed');
+		});
+	</script>
 </head>
+
 <body>
+	<h3 style="text-align:center;">Parallax Demo</h3>
+	<div class="bgimg-1">
+
+	</div>
+
+	<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
 		<h3 style="text-align:center;">Parallax Demo</h3>
-<div class="bgimg-1">
-
-</div>
-
-<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;">Parallax Demo</h3>
-  <p>
-			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
-
-			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
-			
-			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
-			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
-
-			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
-			
-			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
-			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
-
-			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
-			
-			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
-			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients.
-
-			We focus on the future while living in the present and being completely aware of the past. That drives our thinking, impact and presence.
-			
-			We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the product service experience through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
+		<p>
+			Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software
+			Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking, digital transformation expertise,
+			tremendous experience, knack to innovate and a common vision to delivery quality experience for the clients. We focus
+			on the future while living in the present and being completely aware of the past. That drives our thinking, impact and
+			presence. We put the customer at the center of a multidisciplinary, agile approach: alignment of strategy, design, and
+			technology around the customer journey, enabling innovation of the product service experience through iterative, incremental
+			activations and deliver continual enterprise transformation at speed and at scale. Argil DX is new age Digital Experience
+			company. It is amalgamation of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies
+			bring in their unique qualities such as fresh thinking, digital transformation expertise, tremendous experience, knack
+			to innovate and a common vision to delivery quality experience for the clients. We focus on the future while living in
+			the present and being completely aware of the past. That drives our thinking, impact and presence. We put the customer
+			at the center of a multidisciplinary, agile approach: alignment of strategy, design, and technology around the customer
+			journey, enabling innovation of the product service experience through iterative, incremental activations and deliver
+			continual enterprise transformation at speed and at scale. Argil DX is new age Digital Experience company. It is amalgamation
+			of ZAP Technology Solutions LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities
+			such as fresh thinking, digital transformation expertise, tremendous experience, knack to innovate and a common vision
+			to delivery quality experience for the clients. We focus on the future while living in the present and being completely
+			aware of the past. That drives our thinking, impact and presence. We put the customer at the center of a multidisciplinary,
+			agile approach: alignment of strategy, design, and technology around the customer journey, enabling innovation of the
+			product service experience through iterative, incremental activations and deliver continual enterprise transformation
+			at speed and at scale. Argil DX is new age Digital Experience company. It is amalgamation of ZAP Technology Solutions
+			LLC (US) and Accunity Software Pvt Ltd (India). Both companies bring in their unique qualities such as fresh thinking,
+			digital transformation expertise, tremendous experience, knack to innovate and a common vision to delivery quality experience
+			for the clients. We focus on the future while living in the present and being completely aware of the past. That drives
+			our thinking, impact and presence. We put the customer at the center of a multidisciplinary, agile approach: alignment
+			of strategy, design, and technology around the customer journey, enabling innovation of the product service experience
+			through iterative, incremental activations and deliver continual enterprise transformation at speed and at scale.
 
 		</p>
-</div>
+	</div>
 
 </body>
+
 </html>
