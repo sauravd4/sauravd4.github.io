@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+
+    footer {
+      background-color: #3e4551 !important;
+      padding: 25px;
+    }
+
+    .navbar input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+
+    .container {
+      background-color: #f1f1f1;
+    }
+
+    .row .col-sm-4 {
+      background-color: #fff;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 5px 10px;
+      max-height: 300px;
+      overflow: auto;
+    }
+
+    .navbar .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar .search-container button:hover {
+      background: #ccc;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    .card-title {
+      text-transform: capitalize;
+    }
+
+    .quick-links>li {
+      list-style: square;
+      text-align: left;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .col-md-2.mx-auto {
+      margin: 0 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Casitas</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Lake Level</a>
+          </li>
+          <li>
+            <a href="#">Water conservation</a>
+          </li>
+          <li>
+            <a href="#">Lake Casitas Recreation Area</a>
+          </li>
+          <li>
+            <a href="#">Ojai Water</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <div class="search-container">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=941&h=330&src=http://www.drivecms.com/uploads/casitaswater.org//header-dam.jpg"
+          alt="Image">
+        <div class="carousel-caption">
+          <h3>Drought - Casitas Dam</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=941&h=330&src=http://www.drivecms.com/uploads/casitaswater.org//Header_laketree2017.jpg"
+          alt="Image">
+        <div class="carousel-caption">
+          <h3>Drought - Casitas Dam</h3>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=941&h=330&src=http://www.drivecms.com/uploads/casitaswater.org//homepage_header3.jpg"
+          alt="Image">
+        <div class="carousel-caption">
+          <h3>Drought continues to shrink Lake Casitas shoreline</h3>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=941&h=330&src=http://www.drivecms.com/uploads/casitaswater.org//Header_buoy.jpg"
+          alt="Image">
+        <div class="carousel-caption">
+          <h3>Old Highway 150 has resurfaced after nearly half a century of being fully submerged</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class="container">
+
+    <div class="container-fluid ">
+      <div class="row">
+        <h2 class="text-center">Featured Topics</h2>
+        <br>
+        <div class="col-sm-4">
+          <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=191&h=126&zc=1&src=http://www.drivecms.com/uploads/casitaswater.org//Waterwise2.0%20Logo.png"
+            class="img-responsive" style="width:100%" alt="Image">
+          <h4>Water Wise Incentive Program</h4>
+          <p>The long-awaited turf replacement incentive program is here! So if you have been planning to replace your grass
+            ...
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=191&h=126&zc=1&src=http://www.drivecms.com/uploads/casitaswater.org//DSCN0514.JPG"
+            class="img-responsive" style="width:100%" alt="Image">
+          <h4>What Stage 3 Drought Means For You</h4>
+          <p>Stage 3 Drought Declared. As of July 1st 2016, Casitas MWD has entered stage 3 drought. This is new terri...More
+            >>
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://www.casitaswater.org/phpthumb/phpThumb.php?w=191&h=126&zc=1&src=http://www.drivecms.com/uploads/casitaswater.org/Notes.JPG"
+            class="img-responsive" style="width:100%" alt="Image">
+          <h4>Workshops Postponed</h4>
+          <p>Ron Merckling, the scheduled speaker for our June workshop has left Casitas to pursue other endeavors. We wish
+            h...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-3">
+      <div class="row">
+        <br>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">lake casitas recreation area</h2>
+              <p class="card-text">Something for everyone! Over 400 campsites, picnic areas, fishing and boating, biking and hiking, special events
+                and for the most family fun</p>
+              <a href="#" class="card-link">Click Here to go to the Lake Casitas Recreation Area page</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">casitas water</h2>
+              <p class="card-text">Learn how you can find out more about Casitas Water, its history, and operations within the following links:</p>
+              <div class="sub">
+                <p>
+                  <a href="lower.php?url=about-casitas-water">About Casitas</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=history">History</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=faq" title="Frequently Asked Questions">Frequently Asked Questions</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=latest-news">Latest News</a>
+                  <br>
+                  <br>
+                  <a href="http://www.casitaswater.org/newsletters/" title="Newsletters">Newsletters</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=video" title="Videos">Videos</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=contact">Contact</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=links">Links</a>
+                </p>
+                <p>
+                  <a href="http://www.casitaswater.org/lower.php?url=lake-level" title="Casitas Lake Level Page">Lake Level</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">finance</h2>
+              <a href="#" class="card-link">Make a Payment</a>
+              <p class="card-text">CUSTOMER SERVICE</p>
+              <h6 class="card-subtitle mb-2 text-muted">805-649-2251 Extension 0</h6>
+              <p class="card-text">REPORT A LEAK</p>
+              <h6 class="card-subtitle mb-2 text-muted">Monday thru Friday 8:00am – 4:30pm please call: 805-649-2251 Extension 0</h6>
+              <a href="#" class="card-link">Click here to view the Finance page</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Water Conservation</h2>
+              <p class="card-text">Find out how you can save more money and water within the following links:</p>
+              <p> How can I save more water in the home and in the yard?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> What tools are available to help me use water more efficiently in my business?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> How can I increase crop yields and get other agricultural assistance?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> How do I apply for a $250 smart Irrigation Controller rebate?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> What other rebates are available? -
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container-fluid bg-3">
+      <div class="row">
+        <br>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">fisheries program</h2>
+              <a href="#" class="card-link">fisheries program</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">board of directors</h2>
+              <div class="sub">
+                <p>
+                  <a href="lower.php?url=board-agendas" title="Board Meeting Agenda and Minutes">Board Meeting Agenda and Minutes</a>
+                </p>
+                <p>
+                  <a href="http://www.casitaswater.org/lower.php?url=board-of-directors&amp;bio=richard-handley" title="Mary Bergen - Bio">Mary Bergen&nbsp;- Board Director</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=board-of-directors&amp;bio=jim-word">Jim Word - Board Director</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=board-of-directors&amp;bio=pete-kaiser">Pete Kaiser - Board Director</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=board-of-directors&amp;bio=bill-hicks">Bill Hicks - Board Director</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=board-of-directors&amp;bio=russ-baggerly">Russ Baggerly - Board Director</a>
+                </p>
+                <p>
+                  <a href="lower.php?url=board-of-directors">Click here to view Board of Directors page</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">quagga/boating restrictions</h2>
+              <a href="#" class="card-link">Make a Payment</a>
+              <p class="card-text">CUSTOMER SERVICE</p>
+              <h6 class="card-subtitle mb-2 text-muted">805-649-2251 Extension 0</h6>
+              <p class="card-text">REPORT A LEAK</p>
+              <h6 class="card-subtitle mb-2 text-muted">Monday thru Friday 8:00am – 4:30pm please call: 805-649-2251 Extension 0</h6>
+              <a href="#" class="card-link">Click here to view the Finance page</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Stay Connected</h2>
+              <p class="card-text">Find out how you can save more money and water within the following links:</p>
+              <p> How can I save more water in the home and in the yard?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> What tools are available to help me use water more efficiently in my business?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> How can I increase crop yields and get other agricultural assistance?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> How do I apply for a $250 smart Irrigation Controller rebate?
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+              <p> What other rebates are available? -
+                <a href="#" class="card-link"> More information here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container-fluid bg-3">
+      <div class="row">
+        <br>
+        <div class="col-sm-3">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li>
+              <a class="arrow" href="https://www.municipalonlinepayments.com/casitasmwdca" target="_blank" title="Make a Payment">Make a Payment</a>
+            </li>
+            <li>
+              <a class="customer" href="https://www.casitaswater.org/department.php?url=ojai-water" target="_blank" title="Ojai Water Customer">Ojai Water Customer</a>
+            </li>
+            <li>
+              <a class="house" href="https://www.municipalonlinepayments.com/casitasmwdca" target="_blank" title="My Account">My Account</a>
+            </li>
+            <li>
+              <a class="binoculars" href="lower.php?url=report-a-leak" target="_blank" title="Report A Leak">Report A Leak</a>
+            </li>
+            <li>
+              <a class="chat-bubble" href="lower.php?url=board-agendas" target="_blank" title="Agendas and Minutes">Agendas and Minutes</a>
+            </li>
+            <li>
+              <a class="customer" href="http://www.casitaswater.org/customer-services/" target="_blank" title="Customer Services">Customer Services</a>
+            </li>
+            <li>
+              <a class="recycle" href="http://www.casitaswater.org/department.php?url=water-conservation" target="_blank" title="Water Conservation">Water Conservation</a>
+            </li>
+            <li>
+              <a class="computer" href="lower.php?url=bidding-jobs" target="_blank" title="Bidding Jobs">Bidding Jobs</a>
+            </li>
+            <li>
+              <a class="building" href="lower.php?url=employment" target="_blank" title="Employment">Employment</a>
+            </li>
+            <li>
+              <a class="gear" href="https://www.casitaswater.org/lower.php?url=backflow-page" target="_blank" title="Backflow Program">Backflow Program</a>
+            </li>
+            <li>
+              <a class="graph" href="lower.php?url=water-quality" target="_blank" title="Water Quality">Water Quality</a>
+            </li>
+            <li>
+              <a class="world" href="lower.php?url=exapotranspiration-data-et" target="_blank" title="ET (Weather Station)">ET (Weather Station)</a>
+            </li>
+            <li>
+              <a class="dollar-sign" href="https://www.drivecms.com/uploads/casitaswater.org/Rates%202017.pdf" target="_blank" title="Water Rates 2017">Water Rates 2017</a>
+            </li>
+            <li>
+              <a class="dollar-sign" href="https://www.drivecms.com/uploads/casitaswater.org/Rates%202018-21.pdf" target="_blank" title="Water Rates 2018-21">Water Rates 2018-21</a>
+            </li>
+            <li>
+              <a class="graph" href="https://www.drivecms.com/uploads/casitaswater.org/2017%20Hydro%20Report%20(Final).pdf" target="_blank"
+                title="Hydro Report 2016-17">Hydro Report 2016-17</a>
+            </li>
+            <li>
+              <a class="binoculars" href="http://www.publicpay.ca.gov/" target="_blank" title="Employee Compensation">Employee Compensation</a>
+            </li>
+            <li>
+              <a class="clipboard" href="https://www.casitaswater.org/lower.php?url=allocation-149" target="_blank" title="Allocation">Allocation</a>
+            </li>
+            <li>
+              <a class="camping" href="http://www.casitaswater.org/lower.php?url=camping" target="_blank" title="Lake Casitas Camping Reservations ">Lake Casitas Camping Reservations </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-5 ">
+          <h3>Announcement</h3>
+          <div class="bg-warning clearfix p-5">
+            <h2>Stage III Drought Declaration in effect
+              <span class="glyphicon glyphicon-exclamation-sign"></span>
+            </h2>
+            <h4>Mandated Reductions for All Casitas' Customers in Effect</h4>
+            <button type="button" class="btn btn-primary pull-right">More</button>
+          </div>
+          <br>
+          <div class="bg-info clearfix p-5">
+            <h2>Documents Available for Public Review
+              <span class="glyphicon glyphicon-bullhorn"></span>
+            </h2>
+            <h4>Public Notices</h4>
+            <button type="button" class="btn btn-primary pull-right">More</button>
+          </div>
+          <br>
+          <br>
+          <div>
+            <div class="panel panel-warning">
+              <div class="panel-heading">Calender</div>
+              <div class="panel-body">Browse our Calendar of Events to see the latest happenings at The Lake Casitas Recreation Area or to view District
+                Meetings.
+              </div>
+            </div>
+            <div class="panel panel-warning">
+              <div class="panel-heading">Latest News</div>
+              <div class="panel-body strong">Kevin Brown, General Manager of Ventura Water Updates the Ventura City Council on the Status and Schedule of
+                the State Water Project Interconnection (July 9, 2018 - Ventura City Council Meeting)
+                <br>
+                <br>
+                <video controls="" autoplay="" name="media">
+                  <source src="https://www.drivecms.com/uploads/casitaswater.org/Ventura%20Water.mp4?rel=0" type="video/mp4">
+                </video>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <h4>Report Water waste</h4>
+          <button type="button" class="btn btn-danger btn-block">Report Water Waste</button>
+          <br>
+          <br>
+          <h4>Lake Water Levels (Updated Daily*)</h4>
+          <img src="https://www.casitaswater.org/images/lakebdgrnd_lines.jpg" class="img-responsive" style="width:100%" alt="Image">
+          <h4>*Latest update on 07/23/2018</h4>
+          <br>
+          <h4>Map & Directions</h4>
+          <img src="https://www.drivecms.com/uploads/casitaswater.org/newmap.png" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+      </div>
+      <br>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-4" style="background-color: #3e4551 !important">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left" style="background-color: #3e4551 !important; width: 100%">
+
+      <!-- Grid row -->
+      <div class="row" style="background-color:#3e4551!important; color: white; text-align: left;    margin-left: 20px;">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto" style="text-align: left">
+
+          <!-- Content -->
+          <img src="https://www.casitaswater.org/images/small-logo.gif" height="44" width="73" alt="Casitas Municipal Water District"
+            style="    margin-bottom: 10px;">
+          <br>
+          <p>
+            Lake Casitas Recreation Area 11311 Santa Ana Road Ventura, CA 93001 General Information: 805-649-2233 Reservations: 805-649-1122</p>
+          <br>
+          <p>Casitas Municipal Water District - Office 1055 Ventura Ave Oak View, CA 93022 Phone: 805-649-2251 Fax: 805-649-4485</p>
+
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">2015 UWMP/AWMP</a>
+            </li>
+            <li>
+              <a href="#!">Annual Water Report</a>
+            </li>
+            <li>
+              <a href="#!">Bidding Jobs</a>
+            </li>
+            <li>
+              <a href="#!">Board Agendas and Minutes</a>
+            </li>
+            <li>
+              <a href="#!">Current water rates</a>
+            </li>
+            <li>
+              <a href="#!">Employment</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+
+            <li>
+              <a href="lower.php?url=faq" title="FAQ">FAQ</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=finance" title="Finance">Finance</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=how-to-read-your-water-meter" title="How to Read Your Water Meter?">How to Read Your Water Meter?</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=links" title="Links">Links</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=monthly-water-rate-calculator" title="Monthly Water Rate Calculator">Monthly Water Rate Calculator</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=newsletters" title="Newsletters">Newsletters</a>
+            </li>
+
+
+          </ul>
+
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+
+            <li>
+              <a href="lower.php?url=quaggaboating" title="Quagga/Boating Restrictions">Quagga/Boating Restrictions</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=rebates" title="Rebates">Rebates</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=sitemap" title="Sitemap">Sitemap</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=supply-information-for-urban-water-retailers" title="Supply Information for Urban Water Retailers">Supply Information for Urban Water Retailers</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=uwmp-190" title="UWMP">UWMP</a>
+            </li>
+
+
+
+            <li>
+              <a href="lower.php?url=water-utility-and-quality" title="Water Utility/Quality">Water Utility/Quality</a>
+            </li>
+
+
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+      <p style="background-color: #3e4551 !important;padding: 25px;color: white">Some content on this page is saved in an alternative format. To view these files, download the following free software.
+        PDF Documents: Get Adobe® Reader®</p>
+
+    </div>
+
+    <!-- Footer Links -->
+    <hr>
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fa fa-facebook fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fa fa-twitter fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fa fa-google-plus fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fa fa-linkedin fa-2x"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fa fa-dribbble fa-2x"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> casitas.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+</body>
+
+</html>
